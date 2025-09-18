@@ -80,6 +80,7 @@ erDiagram
    User ||--o{ Rating : "gives"
    Recipe ||--o{ Rating : "has"
 ```
-## 🖼️ Screenshot
+## 🖼️ Video
 
-![FlavorAI Screenshot](./frontend/public/screenshot.png)
+https://drive.google.com/file/d/1QSVHjwofye2h1Ux3O-64lKuWgSyq9_16/view?usp=sharing
+```
