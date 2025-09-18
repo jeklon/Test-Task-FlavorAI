@@ -78,7 +78,7 @@ erDiagram
 
    User ||--o{ Recipe : "author"
    User ||--o{ Rating : "gives"
-   Recipe ||--o{ Rating : "has"пше
+   Recipe ||--o{ Rating : "has"
 ```
 ## 🖼️ Screenshot
 
