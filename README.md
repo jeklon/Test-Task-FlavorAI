@@ -78,5 +78,8 @@ erDiagram
 
    User ||--o{ Recipe : "author"
    User ||--o{ Rating : "gives"
-   Recipe ||--o{ Rating : "has"
+   Recipe ||--o{ Rating : "has"пше
 ```
+## 🖼️ Screenshot
+
+![FlavorAI Screenshot](./frontend/public/screenshot.png)
