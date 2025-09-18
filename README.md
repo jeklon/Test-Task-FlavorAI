@@ -10,7 +10,7 @@
 - 🧑‍🍳 Create & manage recipes  
 - ⭐ Rate recipes (1–5)  
 - 🔎 Instant search with dropdown results  
-- 🎨 Cool glassmorphism + gradient UI
+- 🎨 Cool gradient UI
 
 ---
 
