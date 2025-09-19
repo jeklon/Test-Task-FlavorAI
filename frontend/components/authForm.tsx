@@ -1,72 +1,71 @@
 import { useState } from 'react';
 
 type AuthFormProps = {
-    mode: 'signup' | 'signin';
-    onSubmit: (data: { email: string; password: string; name?: string }) => void;
+  mode: 'signup' | 'signin';
+  onSubmit: (data: { email: string; password: string; name?: string }) => void;
 };
 
 export default function AuthForm({ mode, onSubmit }: AuthFormProps) {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        onSubmit({ email, password, name: mode === 'signup' ? name : undefined });
-    };
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onSubmit({ email, password, name: mode === 'signup' ? name : undefined });
+  };
 
-    return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-100 to-orange-200">
-
-            <form
-                onSubmit={handleSubmit}
-                className="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg space-y-6"            >
-                <h2 className="text-xl font-semibold mb-6 text-center">
-                    {mode === 'signup' ? 'Sign Up' : 'Sign In'}
-                </h2>
-
-                {mode === 'signup' && (
-                    <div className="mb-4 ">
-                        <label className="block text-sm font-medium mb-1">Name</label>
-                        <input
-                            type="text"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-1 focus:ring-orange-400"
-                            required
-                        />
-                    </div>
-                )}
-
-                <div className="mb-4">
-                    <label className="block text-sm font-medium mb-1">Email</label>
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-1 focus:ring-orange-400"
-                        required
-                    />
-                </div>
-
-                <div className="mb-6">
-                    <label className="block text-sm font-medium mb-1">Password</label>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-1 focus:ring-orange-400"
-                        required
-                    />
-                </div>
-
-                <button
-                    type="submit"
-                    className="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-md font-medium transition"
-                >
-                    {mode === 'signup' ? 'Create Account' : 'Login'}
-                </button>
-            </form>
+  return (
+    <form onSubmit={handleSubmit} className="space-y-5">
+      {mode === 'signup' && (
+        <div>
+          <label className="mb-1 block text-sm font-medium text-neutral-300">Name</label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white
+                       placeholder:text-neutral-400 focus:border-emerald-400/40 focus:outline-none
+                       focus:ring-2 focus:ring-emerald-500/30"
+          />
         </div>
-    );
+      )}
+
+      <div>
+        <label className="mb-1 block text-sm font-medium text-neutral-300">Email</label>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white
+                     placeholder:text-neutral-400 focus:border-emerald-400/40 focus:outline-none
+                     focus:ring-2 focus:ring-emerald-500/30"
+        />
+      </div>
+
+      <div>
+        <label className="mb-1 block text-sm font-medium text-neutral-300">Password</label>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+          className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white
+                     placeholder:text-neutral-400 focus:border-emerald-400/40 focus:outline-none
+                     focus:ring-2 focus:ring-emerald-500/30"
+        />
+      </div>
+
+      <button
+        type="submit"
+        className="w-full inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-medium
+                   bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 text-white
+                   hover:shadow-[0_8px_30px_rgba(56,189,248,0.35)] active:scale-[0.98] transition"
+      >
+        {mode === 'signup' ? 'Create Account' : 'Login'}
+      </button>
+    </form>
+  );
 }
