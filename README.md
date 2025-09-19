@@ -10,7 +10,7 @@
 - 🧑‍🍳 Create & manage recipes  
 - ⭐ Rate recipes (1–5)  
 - 🔎 Instant search with dropdown results  
-- 🎨 Cool glassmorphism + gradient UI
+- 🎨 Cool gradient UI
 
 ---
 
@@ -78,8 +78,9 @@ erDiagram
 
    User ||--o{ Recipe : "author"
    User ||--o{ Rating : "gives"
-   Recipe ||--o{ Rating : "has"пше
+   Recipe ||--o{ Rating : "has"
 ```
-## 🖼️ Screenshot
+## 🖼️ Video
 
-![FlavorAI Screenshot](./frontend/public/screenshot.png)
+https://drive.google.com/file/d/1QSVHjwofye2h1Ux3O-64lKuWgSyq9_16/view?usp=sharing
+```
