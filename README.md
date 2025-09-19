@@ -82,5 +82,5 @@ erDiagram
 ```
 ## 🖼️ Video
 
-https://drive.google.com/file/d/1QSVHjwofye2h1Ux3O-64lKuWgSyq9_16/view?usp=sharing
+https://drive.google.com/file/d/1La3XbnBEM3LDk7ywE3ELgb1FVCtF2f1J/view?usp=sharing
 ```
